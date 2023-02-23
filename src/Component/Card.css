@@ -1,0 +1,19 @@
+.card-img-top
+{
+    height: 100%;
+    width: 100%;
+}
+.card{
+    height: 70vh;
+    width: 100vw;
+}
+.card-body
+{
+    width: 60vw;
+    position: absolute;
+    margin-top: 20rem;
+    color: aliceblue;
+}
+.card-title , .card-text{
+    text-align: left;
+}

@@ -1,0 +1,42 @@
+.card_child
+{
+   display: inline-block;
+    height: 15rem;
+    border: black;
+    width: 20vw;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 25px;
+    
+}
+.card-title-child
+{
+    position: absolute;
+    margin-top: -240px;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 12px;
+   
+}
+.card-body-child
+{
+    position:absolute;
+    margin-top: -50px;
+    margin-left: 25px;
+    
+}
+.card-img-top-child
+{
+    height: 100%;
+    width: 100%;
+}
+.btn,btn-primary
+{
+   display: none;
+    position: absolute;
+    margin-top: 190px;
+    margin-right: -100px;
+    margin-left: -200px;
+  
+}
