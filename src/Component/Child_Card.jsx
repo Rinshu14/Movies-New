@@ -19,6 +19,9 @@ butn.innerText=check(el._id ,this.props.favrouite)?"Remove  from Fav":"Add to Fa
   <img src={el.poster_path} className="card-img-top-child" alt="..." style={{"border-radius":"10%"}}/>
 
     <h5 class="card-title-child">{el.title}</h5>
+
+
+    
     <button class={`btn btn-primary bt${el._id}`} type="submit" 
     onClick={()=>{
         
