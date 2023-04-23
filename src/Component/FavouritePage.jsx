@@ -40,6 +40,7 @@ class FavrouitePage extends react.Component {
 
   changeFilter = (genre) => {
     if (genre == "All") {
+
       this.setState({ FavMovOfCurrGenre: [...this.state.favMovie], Currgenre: genre })
     }
     else {
@@ -56,36 +57,24 @@ class FavrouitePage extends react.Component {
       this.changeFilter(this.state.Currgenre)
     }
     else {
-      console.log("in if==" + str)
-      // console.log(this.state.FavMovOfCurrGenre)
-      // let ans = this.state.FavMovOfCurrGenre.filter((el) => {
-      //   return el.title.toUpperCase().startsWith(str)
-      // })
+      if (this.state.Currgenre == "All") {
+        let ans = this.state.favMovie.filter((el) => {
+          return el.title.toUpperCase().startsWith(str)
+        })
+        this.setState({ FavMovOfCurrGenre: [...ans] })
+      }
+      else {
 
+        let temp = this.state.favMovie.filter((el) => {
 
+          return (el.genre.name) == this.state.Currgenre
+        })
 
-
-  // if (ans.length==0)
-  // {
-  //   let temp = this.state.favMovie.filter((el) => {
-  //     return (el.genre.name) == genre
-  //   })
-  //   // this.setState({ FavMovOfCurrGenre: [...ans], Currgenre: genre })
-  // }
-
-  let temp = this.state.favMovie.filter((el) => {
-    return (el.genre.name) == this.state.Currgenre
-  })
-
- 
-      let ans = temp.filter((el) => {
-        return el.title.toUpperCase().startsWith(str)
-      })
-
-
-
-
-      this.setState({ FavMovOfCurrGenre: [...ans] })
+        let ans = temp.filter((el) => {
+          return el.title.toUpperCase().startsWith(str)
+        })
+        this.setState({ FavMovOfCurrGenre: [...ans] })
+      }
     }
   }
 
